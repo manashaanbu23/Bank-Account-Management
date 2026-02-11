@@ -70,7 +70,10 @@ IDE	Eclipse IDE
 Database	Oracle 11g
 Connectivity	JDBC (Oracle Driver)
 Architecture	Layered Architecture
-📂 Project Structure
+
+## 📂 Project Structure
+
+```
 packagecreationdemo
 │
 ├── src
@@ -91,6 +94,7 @@ packagecreationdemo
 │           └── BankMain.java
 │
 └── JRE System Library [JavaSE-22]
+```
 
 ⚙️ How to Run in Eclipse IDE
 Step 1 — Install Eclipse
@@ -153,5 +157,7 @@ Multi-branch banking simulation
 👩‍💻 Author
 
 Manasha A
+
 Roll No: 717823P228
+
 Project Type: Java & Oracle Database Mini Project
