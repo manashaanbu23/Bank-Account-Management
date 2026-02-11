@@ -1,0 +1,24 @@
+DROP TABLE TRANSFER_TBL CASCADE CONSTRAINTS;
+DROP TABLE TRANSFER_TABLE CASCADE CONSTRAINTS;
+CREATE TABLE TRANSFER_TBL (
+    Transaction_ID NUMBER PRIMARY KEY,
+    Account_Number VARCHAR2(10),
+    Beneficiary_Account_Number VARCHAR2(10),
+    Transaction_Date DATE,
+    Transaction_Amount NUMBER,
+
+    CONSTRAINT fk_account_new
+        FOREIGN KEY (Account_Number)
+        REFERENCES ACCOUNT_TABLE(Account_Number),
+
+    CONSTRAINT fk_beneficiary_new
+        FOREIGN KEY (Beneficiary_Account_Number)
+        REFERENCES ACCOUNT_TABLE(Account_Number)
+);
+DROP SEQUENCE seq1; 
+
+CREATE SEQUENCE seq1
+START WITH 10000
+INCREMENT BY 1;
+COMMIT;
+SELECT * FROM TRANSFER_TBL;
